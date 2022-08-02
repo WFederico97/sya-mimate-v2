@@ -7,7 +7,7 @@ import 'bootswatch/dist/morph/bootstrap.min.css';
 
 function App() {
   return (
-
+    
           <div className='container-fluid flex bg-dark'>
             <div id='NavBar'>
                 <NavBarLogo/> 

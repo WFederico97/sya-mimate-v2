@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/sya-mimate-v2/static/css/main.15574f47.css",
+    "main.js": "/sya-mimate-v2/static/js/main.c4083394.js",
+    "static/js/787.861558c1.chunk.js": "/sya-mimate-v2/static/js/787.861558c1.chunk.js",
+    "static/media/logo-mimate.png": "/sya-mimate-v2/static/media/logo-mimate.6a3a4c84d9789379aa86.png",
+    "index.html": "/sya-mimate-v2/index.html",
+    "main.15574f47.css.map": "/sya-mimate-v2/static/css/main.15574f47.css.map",
+    "main.c4083394.js.map": "/sya-mimate-v2/static/js/main.c4083394.js.map",
+    "787.861558c1.chunk.js.map": "/sya-mimate-v2/static/js/787.861558c1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15574f47.css",
+    "static/js/main.c4083394.js"
+  ]
+}
