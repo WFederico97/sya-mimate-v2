@@ -1,4 +1,4 @@
-import logo from  '../Images/logo-mimate.png'
+import logo from  '../logo-mimate.png'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';

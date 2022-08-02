@@ -1,0 +1,10 @@
+.iconProductAdd {
+    height: 6em;
+    width: 3em;
+    align-self: center;
+}
+
+.card-producto {
+    background-color: rgba(240, 218, 47, 0.341) !important;
+    width: 20em;
+} 

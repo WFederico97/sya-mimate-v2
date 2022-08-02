@@ -1,12 +1,12 @@
 
-const Data = [
+export const data = [
     {
         "id": 0,
         "categoria": "Mates",
         "nombre": "Camionero Standard",
         "precio": 3900,
         "stock": 15,
-        "imagen": "../reactCoderhouse/proyecto-final/sya-mimate/src/components/Images/mateCamioneroStandard.jpg"
+        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/mateCamioneroStandard.jpg"
 
     },
     {
@@ -15,7 +15,7 @@ const Data = [
         "nombre": "Camionero Eco",
         "precio": 1800,
         "stock": 11,
-        "imagen": "../Images/mateEcoCamionero.jpg "
+        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/mateEcoCamionero.jpg"
 
     },
     {
@@ -24,7 +24,7 @@ const Data = [
         "nombre": "Imperial Eco",
         "precio": 5800,
         "stock": 18,
-        "imagen": "../Images/mateImperialEco.jpg"
+        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/mateImperialEco.jpg"
 
     },
     {
@@ -33,7 +33,7 @@ const Data = [
         "nombre": "Imperial Premium",
         "precio": 8200,
         "stock": 19,
-        "imagen": "../Images/mateImperialPremium.jpg"
+        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/mateImperialPremium.jpg"
 
     },
     {
@@ -42,7 +42,7 @@ const Data = [
         "nombre": "Imperial Premium Cincelado",
         "precio": 8800,
         "stock": 10,
-        "imagen": "../Images/mateImperialPremiumCincelado.webp"
+        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/mateImperialPremiumCincelado.webp"
 
     },
     {
@@ -51,7 +51,7 @@ const Data = [
         "nombre": "Canasta Matera Premium",
         "precio": 2500,
         "stock": 4,
-        "imagen": "../Images/materaCueroAccesorio.png"
+        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/materaCueroAccesorio.png"
 
     },
     {
@@ -60,7 +60,7 @@ const Data = [
         "nombre": "Bombilla Pico del rey",
         "precio": 1900,
         "stock": 13,
-        "imagen": "../Images/picoDelReyBombilla.png"
+        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/picoDelReyBombilla.png"
 
     },
     {
@@ -69,7 +69,7 @@ const Data = [
         "nombre": "Termo Alumnio sin manija",
         "precio": 8000,
         "stock": 20,
-        "imagen": "../Images/termoAluminionSinManija.jpg"
+        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/termoAluminionSinManija.jpg"
 
     },
     {
@@ -78,14 +78,8 @@ const Data = [
         "nombre": "Pindare",
         "precio": 900,
         "stock": 100,
-        "imagen": "../Images/yerbaPindare.jpg"
+        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/yerbaPindare.jpg"
 
     }
 ]
 
-const getFetch = new Promise ((resolve, reject)=>{
-    let condition=true
-    condition ? setTimeout(()=>{resolve(Data)}, 2000) : reject(console.log("error en base de datos"))
-})
-
-export default getFetch;
