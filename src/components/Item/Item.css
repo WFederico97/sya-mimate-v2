@@ -4,6 +4,11 @@
     align-self: center;
 }
 
+.imgProduct {
+    height: 8em !important;
+    width: 8em !important;
+}
+
 .card-producto {
     background-color: rgba(240, 218, 47, 0.341) !important;
     width: 20em;

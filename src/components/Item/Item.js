@@ -13,8 +13,8 @@ export default function Item(props) {
       
   return (
     <>
-          <Card style={{ width: '18rem' }} className='col-3 m-2 p-2 card-producto '>
-            <Card.Img className='p-3' src={props.imagen} />
+          <Card  className='col-3 m-2 p-2 card-producto '>
+            <Card.Img className='p-3 img-fluid imgProduct' src={props.imgUrl} style={{width:'3rem', height: '3rem'}} />
             <Card.Body className='cardBody p-2' >
               <Card.Title className="text-light fw-lighter" >{props.categoria}: <br/> {props.nombre} </Card.Title>
               <Card.Text className="fw-bold fs-3 text-light">

@@ -6,7 +6,7 @@ export const data = [
         "nombre": "Camionero Standard",
         "precio": 3900,
         "stock": 15,
-        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/mateCamioneroStandard.jpg"
+        "imagen": "../Images/mateCamioneroStandard.jpg"
 
     },
     {
@@ -15,7 +15,7 @@ export const data = [
         "nombre": "Camionero Eco",
         "precio": 1800,
         "stock": 11,
-        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/mateEcoCamionero.jpg"
+        "imagen": "../Images/mateEcoCamionero.jpg"
 
     },
     {
@@ -24,7 +24,7 @@ export const data = [
         "nombre": "Imperial Eco",
         "precio": 5800,
         "stock": 18,
-        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/mateImperialEco.jpg"
+        "imagen": "../Images/mateImperialEco.jpg"
 
     },
     {
@@ -33,7 +33,7 @@ export const data = [
         "nombre": "Imperial Premium",
         "precio": 8200,
         "stock": 19,
-        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/mateImperialPremium.jpg"
+        "imagen": "../Images/mateImperialPremium.jpg"
 
     },
     {
@@ -42,7 +42,7 @@ export const data = [
         "nombre": "Imperial Premium Cincelado",
         "precio": 8800,
         "stock": 10,
-        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/mateImperialPremiumCincelado.webp"
+        "imagen": "../Images/mateImperialPremiumCincelado.webp"
 
     },
     {
@@ -51,7 +51,7 @@ export const data = [
         "nombre": "Canasta Matera Premium",
         "precio": 2500,
         "stock": 4,
-        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/materaCueroAccesorio.png"
+        "imagen": "../Images/materaCueroAccesorio.png"
 
     },
     {
@@ -60,7 +60,7 @@ export const data = [
         "nombre": "Bombilla Pico del rey",
         "precio": 1900,
         "stock": 13,
-        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/picoDelReyBombilla.png"
+        "imagen": "../Images/picoDelReyBombilla.png"
 
     },
     {
@@ -69,7 +69,7 @@ export const data = [
         "nombre": "Termo Alumnio sin manija",
         "precio": 8000,
         "stock": 20,
-        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/termoAluminionSinManija.jpg"
+        "imagen": "../Images/termoAluminionSinManija.jpg"
 
     },
     {
@@ -78,7 +78,7 @@ export const data = [
         "nombre": "Pindare",
         "precio": 900,
         "stock": 100,
-        "imagen": "./reactCoderhouse/proyecto-final-v2/public/Images/Images/yerbaPindare.jpg"
+        "imagen": "../Images/yerbaPindare.jpg"
 
     }
 ]

@@ -1,5 +1,5 @@
 import React from 'react'
-import { data } from '../Data/itemData';
+import { data } from '../../Data/itemData';
 import { useState, useEffect } from "react";
 import ItemList from '../ItemList/ItemList'
 
@@ -29,12 +29,13 @@ useEffect(() => {
     });
 
 })
-
+console.log(data)
   return (
     <>
       {
         loading ? <h4 className='text-dark text-center bg-warning '>Cargando productos...</h4> : <ItemList productos={resultado} />
       }
+      
     </>
   )
 }

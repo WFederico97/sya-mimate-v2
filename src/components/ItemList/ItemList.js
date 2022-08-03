@@ -7,7 +7,7 @@ export default function ItemList(props) {
     {
         props.productos.map((product)=>{
             return(
-                <Item key={product.id} precio={product.precio} nombre={product.nombre} categoria={product.categoria} stock={product.stock} imagen={product.imagen}  />
+                <Item key={product.id} precio={product.precio} nombre={product.nombre} categoria={product.categoria} stock={product.stock} imgUrl={product.imagen}  />
             )
 
         })
