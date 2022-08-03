@@ -1,5 +1,5 @@
 import React from 'react'
-import { data } from '../../Data/itemData';
+import { data } from '../Data/itemData';
 import { useState, useEffect } from "react";
 import ItemList from '../ItemList/ItemList'
 
@@ -29,7 +29,6 @@ useEffect(() => {
     });
 
 })
-console.log(data)
   return (
     <>
       {
