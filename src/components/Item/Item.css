@@ -4,10 +4,11 @@
     align-self: center;
 }
 
-.imgProduct {
-    height: 8em !important;
-    width: 8em !important;
-}
+/* .imgProduct {
+    height: 16em !important;
+    width: 16em !important;
+    border-radius: 25% !important;
+} */
 
 .card-producto {
     background-color: rgba(240, 218, 47, 0.341) !important;

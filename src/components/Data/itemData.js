@@ -6,7 +6,7 @@ export const data = [
         nombre: "Camionero Standard",
         precio: 3900,
         stock: 15,
-        imagen: "mateCamioneroStandard.jpg"
+        imagen: "./mateCamioneroStandard.jpg"
 
     },
     {
@@ -15,7 +15,7 @@ export const data = [
         nombre: "Camionero Eco",
         precio: 1800,
         stock: 11,
-        imagen: "mateEcoCamionero.jpg"
+        imagen: "./mateEcoCamionero.jpg"
 
     },
     {
@@ -24,7 +24,7 @@ export const data = [
         nombre: "Imperial Eco",
         precio: 5800,
         stock: 18,
-        imagen: "mateImperialEco.jpg"
+        imagen: "./mateImperialEco.jpg"
 
     },
     {
@@ -33,7 +33,7 @@ export const data = [
         nombre: "Imperial Premium",
         precio: 8200,
         stock: 19,
-        imagen: "mateImperialPremium.jpg"
+        imagen: "./mateImperialPremium.jpg"
 
     },
     {
@@ -42,7 +42,7 @@ export const data = [
         nombre: "Imperial Premium Cincelado",
         precio: 8800,
         stock: 10,
-        imagen: "mateImperialPremiumCincelado.webp"
+        imagen: "./mateImperialPremiumCincelado.webp"
 
     },
     {
@@ -51,7 +51,7 @@ export const data = [
         nombre: "Canasta Matera Premium",
         precio: 2500,
         stock: 4,
-        imagen: "materaCueroAccesorio.png"
+        imagen: "./materaCueroAccesorio.png"
 
     },
     {
@@ -60,7 +60,7 @@ export const data = [
         nombre: "Bombilla Pico del rey",
         precio: 1900,
         stock: 13,
-        imagen: "picoDelReyBombilla.png"
+        imagen: "./picoDelReyBombilla.png"
 
     },
     {
@@ -69,7 +69,7 @@ export const data = [
         nombre: "Termo Alumnio sin manija",
         precio: 8000,
         stock: 20,
-        imagen: "termoAluminionSinManija.jpg"
+        imagen: "./termoAluminionSinManija.jpg"
 
     },
     {
@@ -78,7 +78,7 @@ export const data = [
         nombre: "Pindare",
         precio: 900,
         stock: 100,
-        imagen: "yerbaPindare.jpg"
+        imagen: "./yerbaPindare.jpg"
 
     }
 ]
