@@ -1,0 +1,17 @@
+.carrousel-inner{
+    height: auto;
+    width: auto;
+}
+.home-saludo {
+    text-align: center;
+}
+.p-home {
+    color: #fff;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+:root {
+    --animate-duration: 3000ms !important;
+    --animate-delay: 0.9s !important; 
+}
