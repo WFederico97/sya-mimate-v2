@@ -3,8 +3,15 @@ import Counter from '../ItemCount/ItemCount';
 import Card from 'react-bootstrap/Card';
 import './Item.css'
 import Button from 'react-bootstrap/Button';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import {useEffect} from 'react'
 
 export default function Item(props) {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
     function agregarProducto () {
         return(
           alert('¡Producto Agregado!')
@@ -15,7 +22,7 @@ export default function Item(props) {
       
   return (
     <>
-          <Card  className='col-3 m-2 p-2 card-producto '>
+          <Card data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="500" className='col-3 m-2 p-2 card-producto '>
             <Card.Img className='p-3 img-fluid shadow p-3 mb-5 bg-body rounded imgProduct' style={{width:'18em', height:'18em'}}  src={cargarImagen(`${props.imagen}`)}  />
             <Card.Body className='cardBody p-2' >
               <Card.Title className="text-light fw-lighter" >{props.categoria}: <br/> {props.nombre} </Card.Title>
