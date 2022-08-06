@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sya-mimate-v2/static/css/main.15574f47.css",
-    "main.js": "/sya-mimate-v2/static/js/main.6f4419c9.js",
+    "main.css": "/sya-mimate-v2/static/css/main.9dbd697d.css",
+    "main.js": "/sya-mimate-v2/static/js/main.8688b08d.js",
     "static/js/787.861558c1.chunk.js": "/sya-mimate-v2/static/js/787.861558c1.chunk.js",
     "static/media/materaCueroAccesorio.png": "/sya-mimate-v2/static/media/materaCueroAccesorio.11d85f497f53ed8196fe.png",
     "static/media/torpedoMate2.png": "/sya-mimate-v2/static/media/torpedoMate2.5597f9ff5e91349a786b.png",
@@ -47,12 +47,12 @@
     "static/media/fondoNegro.jpg": "/sya-mimate-v2/static/media/fondoNegro.3c5fe7fae95913f6553d.jpg",
     "static/media/picoDelReyBombilla.png": "/sya-mimate-v2/static/media/picoDelReyBombilla.995469d1d4aaed742643.png",
     "index.html": "/sya-mimate-v2/index.html",
-    "main.15574f47.css.map": "/sya-mimate-v2/static/css/main.15574f47.css.map",
-    "main.6f4419c9.js.map": "/sya-mimate-v2/static/js/main.6f4419c9.js.map",
+    "main.9dbd697d.css.map": "/sya-mimate-v2/static/css/main.9dbd697d.css.map",
+    "main.8688b08d.js.map": "/sya-mimate-v2/static/js/main.8688b08d.js.map",
     "787.861558c1.chunk.js.map": "/sya-mimate-v2/static/js/787.861558c1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.15574f47.css",
-    "static/js/main.6f4419c9.js"
+    "static/css/main.9dbd697d.css",
+    "static/js/main.8688b08d.js"
   ]
 }
