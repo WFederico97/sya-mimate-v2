@@ -4,6 +4,6 @@
     border-radius: 40%;
 }
 
-.navLinks{
-    text-align: center;
+.nav-link:hover {
+    background-color: rgba(255, 0, 0, 0.168)
 }

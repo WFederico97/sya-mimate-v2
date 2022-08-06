@@ -23,12 +23,12 @@ function NavBarLogo() {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="m-auto navLinks">
-              <Nav.Link href="#Mates">Mates</Nav.Link>
-              <Nav.Link href="#Bombillas">Bombillas</Nav.Link>
-              <Nav.Link href="#Yerbas">Yerbas</Nav.Link>
-              <Nav.Link href="#Termos">Termos</Nav.Link>
-              <Nav.Link href="#Accesorios">Accesorios</Nav.Link>
+            <Nav className="m-auto navLinks ">
+              <Nav.Link className='text-warning ' href="#Mates">Mates</Nav.Link>
+              <Nav.Link className='text-warning' href="#Bombillas">Bombillas</Nav.Link>
+              <Nav.Link className='text-warning' href="#Yerbas">Yerbas</Nav.Link>
+              <Nav.Link className='text-warning' href="#Termos">Termos</Nav.Link>
+              <Nav.Link className='text-warning' href="#Accesorios">Accesorios</Nav.Link>
             </Nav>
             <CartWidget/>
             </Navbar.Collapse>
