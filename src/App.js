@@ -1,6 +1,6 @@
 import '../src/components/NavBar/NavBar'
 import NavBarLogo from './components/NavBar/NavBar';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import 'bootswatch/dist/morph/bootstrap.min.css';
 
 
@@ -14,7 +14,7 @@ function App() {
             </div>
             <br></br>
             <div id='Catalogo' className='container'>
-                <ItemDetailContainer/>
+                <ItemListContainer/>
             </div>
           </div>
           
