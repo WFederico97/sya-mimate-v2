@@ -4,24 +4,30 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { getProductById } from '../Data/itemData';
+import { getFetch } from '../Data/itemData';
 
 export default function ItemDetailContainer() {
-  const [resultado, setResultado] = useState([{}]);
+  const [loading, setLoading] = useState(true);
+  const [error ,setError] = useState(false);
+  const [resultado, setResultado] = useState();
   const {id} = useParams();
+  
+  useEffect(() => {
+    getFetch.then((res) =>{
+      if(id){
+          setResultado(res.filter(products => products.id == id))
+      }
+      else setResultado(res)
+    })
 
-  useEffect (()=> {
-    AOS.init();
-    AOS.refresh();
-    
-    getProductById(id)
-      .then(resolve => {
-        setResultado(resolve)
-      })
-      .catch(error => {
-        console.log(error)
-      })
-    }, [id])
+    .catch(()=>{
+      setError(true)
+    })
+    .finally(()=> {
+      setLoading(false)
+    })
+  }, [id])
+
   return (
     <div>
       {

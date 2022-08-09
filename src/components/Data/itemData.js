@@ -115,7 +115,7 @@ export const getFetch = new Promise((res,rej)=>{
 export const getProductById = (id) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(data.find(prod => prod.id === id))
+            resolve(data.find(prod => prod.id == id))
         }, 500)
     })
   }

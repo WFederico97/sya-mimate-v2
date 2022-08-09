@@ -21,11 +21,7 @@ function App() {
             <br/>
             <Routes>
               <Route path='/' element={<ItemListContainer /> }/>
-              <Route path='/categoria/:categoryId'  element={<ItemListContainer categoria={"mates"}/>}/>
-              <Route path='/categoria/:categoryId' element={<ItemListContainer categoria={"bombillas"}  />}/>
-              <Route path='/categoria/:categoryId'  element={<ItemListContainer  categoria={'yerbas'}/>}/>
-              <Route path='/categoria/:categoryId'  element={<ItemListContainer categoria={'termos'} />}/>
-              <Route path='/categoria/:categoryId'  element={<ItemListContainer categoria={'accesorios'} />}/>
+              <Route path='/categoria/:categoryId'  element={<ItemListContainer />}/>
               <Route path='/item/:id' element={<ItemDetailContainer />} />
             </Routes>
             <br/>

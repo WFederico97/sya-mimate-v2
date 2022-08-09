@@ -9,23 +9,22 @@ export default function ItemListContainer() {
   const [loading, setLoading] = useState(true);
   const [error ,setError] = useState(false);
   const [resultado, setResultado] = useState([]);
-  const { categoryId } = useParams
-
+  const { categoryId } = useParams ();
   useEffect(() => {
+    getFetch.then((res) =>{
+      if(categoryId){
+          setResultado(res.filter(products => products.categoria == categoryId))
+      }
+      else setResultado(res)
+    })
 
-    if(!categoryId){
-      getFetch
-      .then((resp)=>setResultado(resp))
-      .catch(()=>setError(true))
-      .finally(() => {
-        setLoading(false)
-      })
-    }else{
-      getProductsByCategory(categoryId).then(data=>{
-        setResultado(data)
-      })
-    }
-  })
+    .catch(()=>{
+      setError(true)
+    })
+    .finally(()=> {
+      setLoading(false)
+    })
+  }, [categoryId])
 
   return (
     <>
