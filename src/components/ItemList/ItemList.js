@@ -3,11 +3,11 @@ import Item from '../Item/Item'
 
 export default function ItemList(props) {
     return (
-   <div className='container flex row justify-content-center col-12'>
+   <div className='catalogo container flex row justify-content-center col-12'>
     {
         props.productos.map((product)=>{
             return(
-                <Item key={product.id} imagen={product.imagen}  precio={product.precio} nombre={product.nombre} categoria={product.categoria} stock={product.stock}  />
+                <Item key={product.id} imagen={product.imagen}  descripcion={product.descripcion} nombre={product.nombre} categoria={product.categoria} stock={product.stock}  />
             )
 
         })

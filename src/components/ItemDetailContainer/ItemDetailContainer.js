@@ -1,47 +1,39 @@
 import React from 'react'
 import { useState, useEffect } from "react";
-import ItemList from '../ItemDetail/ItemDetail'
+import ItemDetail from '../ItemDetail/ItemDetail';
+import { useParams } from 'react-router-dom';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-export default function ItemListContainer() {
-    const data = [{
-        id: 4,
-        categoria: "Mates",
-        nombre: "Imperial Premium Cincelado",
-        precio: 8800,
-        stock: 10,
-        imagen: "./mateImperialPremiumCincelado.webp"
-    }]
-  //console.log(data)
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-  const [resultado, setResultado] = useState([]);
-  
-useEffect(() => {
-  const productCarrito = new Promise ((res, rej)=>{
-    setTimeout(() => {
-           res(data)
-           rej("¡Error! No se pudieron cargar los productos")
-    }, 2000);
-  })
+export default function ItemDetailContainer() {
+  const [resultado, setResultado] = useState([{}]);
+  const {productId} = useParams();
 
-  productCarrito
-    .then((result)=>{
-      setResultado(result)
+  useEffect (()=> {
+    AOS.init();
+    AOS.refresh();
+    
+    const ProductsId = new Promise ((res,rej)=>{
+      setTimeout(()=>{
+        res(resultado.find(prod => prod.id === resultado.id ))
+        rej("error")
+      }, 1000)
     })
-    .catch(()=> {
-      setError(true)
-    })
-    .finally(()=>{
-      setLoading(false)
-    });
 
-})
-  return (
-    <>
-      {
-        loading ? <h4 className='text-dark text-center bg-warning '>Cargando productos...</h4> : <ItemList productos={resultado} />
-      }
+    ProductsId (productId)
+      .then(resultado => {
+        setResultado(resultado)
+      })
+      .catch(error => {
+        console.log(error)
+      })
       
-    </>
-  )
+    }, [])
+  return (
+    <div>
+      {
+        <ItemDetail {...resultado} />
+      }
+    </div>
+  );
 }
