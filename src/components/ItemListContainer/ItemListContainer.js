@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import ItemList from '../ItemList/ItemList'
-import { data } from '../Data/itemData';
+import { data, getFetch, getProductsByCategory } from '../Data/itemData';
 import { useParams } from 'react-router-dom';
 
 export default function ItemListContainer() {
@@ -13,36 +13,18 @@ export default function ItemListContainer() {
 
   useEffect(() => {
 
-    const ProductData = new Promise((res, rej) => {
-      setTimeout(() => {
-        res(data)
-        rej("¡Error! No se pudieron cargar los productos")
-      }, 2000)
-    })
-
-    const ProductsCategory = new Promise((res, rej) => {
-      setTimeout(() => {
-        res(data)
-        rej("error")
-      }, 2000)
-    })
-
-    if (!categoryId) {
-      ProductData
-        .then((result) => {
-          setResultado(result)
-        })
-        .catch(() => {
-          setError(true)
-        })
-        .finally(() => {
-          setLoading(false)
-        })
-    } else {
-      ProductsCategory(categoryId).then(resultado => {
-        setResultado(resultado)
+    if(!categoryId){
+      getFetch
+      .then((resp)=>setResultado(resp))
+      .catch(()=>setError(true))
+      .finally(() => {
+        setLoading(false)
       })
-    };
+    }else{
+      getProductsByCategory(categoryId).then(data=>{
+        setResultado(data)
+      })
+    }
   })
 
   return (
