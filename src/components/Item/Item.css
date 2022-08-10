@@ -1,16 +1,19 @@
-.iconProductAdd {
-    height: 6em;
-    width: 3em;
-    align-self: center;
+.cardItem {
+background-color: #ffffff3c;
+
+}
+.cardTittle {
+    color: #ffc107;
+    font-weight: bolder;
+}
+.cardText{
+    color: #fff;
+    font-weight: bolder;
+}
+.imagenProducto {
+    height: 10em;
+    width: 10em;
+    border-radius: 20%;
+    margin: 1em;
 }
 
-/* .imgProduct {
-    height: 16em !important;
-    width: 16em !important;
-    border-radius: 25% !important;
-} */
-
-.card-producto {
-    background-color: rgba(240, 218, 47, 0.341) !important;
-    width: 20em;
-} 

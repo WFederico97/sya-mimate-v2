@@ -1,4 +1,5 @@
 import '../src/components/NavBar/NavBar'
+import './App.css'
 import SaludoHome from './components/IntroHome/IntroHome';
 import NavBarLogo from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
@@ -13,10 +14,11 @@ function App() {
 
   return (
     
-          <div  className='container-fluid flex bg-dark body'>
+          <div  className='container-fluid flex  body'>
             <div id='NavBar'>
                 <NavBarLogo/> 
             </div>
+            <span></span>
             <SaludoHome/>
             <br/>
             <Routes>
@@ -24,8 +26,6 @@ function App() {
               <Route path='/categoria/:categoryId'  element={<ItemListContainer />}/>
               <Route path='/item/:id' element={<ItemDetailContainer />} />
             </Routes>
-            <br/>
-            <br></br>
           </div>
           
   )

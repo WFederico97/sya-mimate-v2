@@ -13,9 +13,11 @@ export default function ItemDetailContainer() {
   const {id} = useParams();
   
   useEffect(() => {
+    AOS.init();
+    AOS.refresh();
     getFetch.then((res) =>{
       if(id){
-          setResultado(res.filter(products => products.id == id))
+          setResultado(res.find(products => products.id == id))
       }
       else setResultado(res)
     })

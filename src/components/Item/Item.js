@@ -1,10 +1,10 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card';
 import './Item.css'
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container'
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {useEffect} from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
 export default function Item(props) {
@@ -12,25 +12,31 @@ export default function Item(props) {
     AOS.init();
     AOS.refresh();
   }, []);
-      
 
-      
+
+
   return (
     <>
-          <Card data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="500" className='col-3 m-2 p-2 card-producto '>
-            <Card.Img className='p-3 img-fluid shadow p-3 mb-5 bg-body rounded imgProduct' style={{width:'18em', height:'18em'}}  src={props.imagen}  />
-            <Card.Body className='cardBody p-2' >
-              <Card.Title className="text-dark fs-3 fw-bolder text-wrap" >{props.nombre} </Card.Title>
-              <Card.Text className="fw-bold fs-6 text-white">
-                  {props.descripcion}
-              </Card.Text>
-              {/* <Counter initial={1} stock={props.stock}/> */}
-              <Link to={`/item/${props.id}`}>
-                  <Button variant='btn  btn-primary btnCarrito mx-auto row col-12'>Ver detalles</Button>
-              </Link>
+      <Container fluid className='col-6 m-auto p-auto d-flex row mx-auto justify-content-center'>
+        <div class="row flex col-12 mb-2 ">
+          <div class="col-sm">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative cardItem">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 fs-4 text-dark">{props.categoria}</strong>
+                <h3 class="mb-0 cardTittle">{props.nombre}</h3>
+                <p class="card-text mb-auto p-1 fs-5 cardText">{props.descripcion}</p>
+                <Link to={`/item/${props.id}`}>
+                  <Button variant='btn  btn-primary btnCarrito mx-auto row col-6'>Ver detalles</Button>
+                </Link>
+              </div>
+              <div class="col-auto  d-lg-flex">
+                <img src={props.imagen} alt='product img' className='img-fluid imagenProducto ' />
 
-            </Card.Body>
-          </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
     </>
   )
 }

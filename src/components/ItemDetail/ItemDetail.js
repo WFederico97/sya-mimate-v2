@@ -1,28 +1,39 @@
 import Card from 'react-bootstrap/Card';
-import React from 'react'
+import React, { useState } from 'react';
 import Counter from '../ItemCount/ItemCount'
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/esm/Container';
 
-export default function ItemDetail({imagen, nombre, precio, stock}) {
-  const productoAñadido = () => {
+
+export default function ItemDetail({ imagen, nombre, precio, stock }) {
+  const agregarProducto = () => {
     return (
-        alert("Producto agregado")
+      alert("¡Producto(s) Agregado(s) !")
     )
-}
-    return (
-        <div className='product-detail container-flex row justify-content-center col-12'>
-          { <Card data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="500" className='col-6 mx-auto m-2 p-2 card-producto '>
-            <Card.Img className='p-3 img-fluid shadow p-3 mb-5 mx-auto bg-body rounded imgProduct' style={{width:'18em', height:'18em'}}  src={imagen}  />
-            <Card.Body className='cardBody p-2 mx-auto' >
-              <Card.Title className="text-light fw-lighter" > {nombre} </Card.Title>
-              <Card.Text className="fw-bold fs-3 text-light">
-                  ${precio}
-              </Card.Text>
-              <Counter initial={1} stock={stock}/>
-              <Button onClick={productoAñadido} variant='btn  btn-primary btnCarrito mx-auto row '>Agregar al carrito</Button>
-            </Card.Body>
-          </Card> }
-
+  }
+  return (
+    <Container fluid className='col-4 m-auto p-auto d-flex row mx-auto justify-content-center'>
+      <div class="row flex col-12 mb-2 ">
+        <div class="col-sm ">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 justify-content-center position-relative cardItem">
+            <div class="col p-4 d-flex flex-column position-static">
+              {/* <strong class="d-inline-block mb-2 fs-4 text-dark">{categoria}</strong> */}
+              <h3 class="mb-0 cardTittle">{nombre}</h3>
+              <p class="card-text mb-auto p-1 fs-1 cardText">${precio}</p>
+            </div>
+            <div class="col-auto  d-lg-flex">
+              <img src={imagen} alt='product img' className='img-fluid imagenProducto ' />
+            </div>
+            <Counter  initial={1} stock={stock} />
+            <span className=' fs-3 text-center text-warning fw-bold'>Stock disponible : {stock}</span>
+            <Button onClick={agregarProducto}  variant='btn btn-info'>Agregar producto</Button>
+          </div>
         </div>
-    )
+      </div>
+    </Container>
+
+
+
+
+  )
 }
