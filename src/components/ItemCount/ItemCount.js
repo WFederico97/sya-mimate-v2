@@ -14,16 +14,16 @@ export default function Counter(props) {
     }
 
     function reduceCounter() {
-        if (Counter >= 1) {
-            setCounter(Counter - 1)
-        } else {
+        if (Counter <= 1) {
             alert('No has seleccionado ningun producto')
+        } else {
+            setCounter(Counter - 1)
         }
     }
     function agregarProducto () {
         if( Counter >= 1) {
             alert('¡Producto(s) Agregado(s)!')
-            setCounter(0)
+            setCounter(1)
         } else {
             alert('No hay productos para agregar, porfavor seleccione almenos UN producto')
         }
