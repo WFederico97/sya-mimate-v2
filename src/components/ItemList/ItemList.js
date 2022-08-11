@@ -3,7 +3,7 @@ import Item from '../Item/Item'
 
 export default function ItemList(props) {
     return (
-   <div className='catalogo container flex row justify-content-center col-12'>
+   <div className='catalogo container-fluid mx-auto d-flex  row justify-content-center col-xl-12'>
     {
         props.productos.map((product)=>{
             return(

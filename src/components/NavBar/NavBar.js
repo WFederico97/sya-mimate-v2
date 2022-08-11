@@ -6,7 +6,7 @@ import './NavBar.css'
 import CartWidget from '../CartWidget';
 import { Link } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
-
+import { TiThMenu } from "react-icons/ti";
 
 
 function NavBarLogo(props) {
@@ -27,7 +27,9 @@ function NavBarLogo(props) {
 
              
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav color-light">
+          <TiThMenu className='button-toggler'/>
+          </Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto navLinks fs-4 fw-bold ">
               <Nav.Link as={Link} to={"/categoria/Mates"} className='text-warning '>Mates</Nav.Link>

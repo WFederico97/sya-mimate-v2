@@ -13,7 +13,6 @@
     font-weight: bold;
     word-wrap: break-word;
 }
-
 :root {
     --animate-duration: 3000ms !important;
     --animate-delay: 0.9s !important; 

@@ -7,7 +7,7 @@ import 'animate.css';
 export default function SaludoHome() {
     return (
         <>
-            <div className=" d-flex row col-12">
+            <div className=" d-flex row col-xl-12">
                 <div className="home-saludo text-warning">
                 <h1 className="text-warning fw-bold">Bienvenido a SyA MiMate</h1>
                 <h4 className="p-home animate__animated animate__fadeInLeft">
@@ -18,7 +18,7 @@ export default function SaludoHome() {
                 </h4>
                 </div>
                 <div className="carrouselHome">
-                <Carousel fade className="container block col-5 ">
+                <Carousel fade className="container-fluid block col-md-5 ">
                     <Carousel.Item className="col-12">
                         <img
                             className="d-block mx-auto img-fluid col-12"

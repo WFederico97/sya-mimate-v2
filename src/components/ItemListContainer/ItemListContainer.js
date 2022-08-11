@@ -4,6 +4,7 @@ import ItemList from '../ItemList/ItemList'
 import { data, getFetch, getProductsByCategory } from '../Data/itemData';
 import { useParams } from 'react-router-dom';
 
+
 export default function ItemListContainer() {
   //console.log(data)
   const [loading, setLoading] = useState(true);

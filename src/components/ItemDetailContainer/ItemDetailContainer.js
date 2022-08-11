@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { getFetch } from '../Data/itemData';
 
+
 export default function ItemDetailContainer() {
   const [loading, setLoading] = useState(true);
   const [error ,setError] = useState(false);
