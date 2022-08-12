@@ -1,43 +1,36 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button';
 
-export default function Counter(props) {
-    const [Counter, setCounter] = useState(props.initial);
+export default function Counter({initial, stock, onAdd}) {
+    const [Counter, setCounter] = useState(parseInt (initial));
 
     function addCounter() {
-        if (Counter >= props.stock) {
-            alert(`El stock maximo es ${props.stock}`);
-        } else {
+        if (Counter <= stock) {
             setCounter(Counter + 1);
         }
 
     }
 
     function reduceCounter() {
-        if (Counter <= 1) {
-            alert('No has seleccionado ningun producto')
-        } else {
+        if (Counter >= 1) {
             setCounter(Counter - 1)
         }
     }
-    function agregarProducto () {
-        if( Counter >= 1) {
-            alert('¡Producto(s) Agregado(s)!')
-            setCounter(1)
-        } else {
-            alert('No hay productos para agregar, porfavor seleccione almenos UN producto')
-        }
-    }
+
+    useEffect(()=>{
+        setCounter(parseInt(initial))
+    }, [initial])
+
 
     return (
         <div className='container d-flex row justify-content-center  col-12 '>
             <div className='container d-flex align-items-center col-6  text-center fw-bolder m-2'>
-                <Button variant=' btn btn-success  botonAdd fs-5 shadow' onClick={addCounter}>+</Button>
+                <Button disabled={Counter >= stock} variant=' btn btn-success  botonAdd fs-5 shadow' onClick={addCounter}>+</Button>
                 <span className='m-3 text-dark fs-1'> {Counter}</span>
-                <Button variant='btn btn-danger botonReduce fs-5 shadow' onClick={reduceCounter}  >-</Button>
+                <Button disabled={Counter <= 1} variant='btn btn-danger botonReduce fs-5 shadow' onClick={reduceCounter}  >-</Button>
             </div>
             <div className='justify-content-center col-6'>
-            <Button onClick={agregarProducto}  variant='btn btn-info'>Agregar producto</Button>
+            <Button disabled={stock <= 0} onClick={() => onAdd(Counter)}  variant='btn btn-info'>Agregar al carrito</Button>
             </div>
         </div>
     )
