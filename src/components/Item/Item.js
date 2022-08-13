@@ -7,13 +7,12 @@ import "aos/dist/aos.css";
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
+
 export default function Item(props) {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-  }, []);
-
-
+  }, );
 
   return (
     <>
