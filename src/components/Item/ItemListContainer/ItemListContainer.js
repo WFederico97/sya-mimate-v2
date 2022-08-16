@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import ItemList from '../ItemList/ItemList'
-import { data, getFetch, getProductsByCategory } from '../Data/itemData';
+import { data, getFetch, getProductsByCategory } from '../../Data/itemData';
 import { useParams } from 'react-router-dom';
 
 

@@ -16,7 +16,7 @@ export default function Item(props) {
 
   return (
     <>
-      <Container fluid className=' col-md-6 m-auto p-auto d-flex row mx-auto justify-content-center'>
+      <Container fluid="xl" className=' w-50 col-md-6 m-auto p-auto d-flex row mx-auto justify-content-center'>
         <div className="row flex col-xl-12 mb-2 ">
           <div className="col-sm">
             <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative cardItem">

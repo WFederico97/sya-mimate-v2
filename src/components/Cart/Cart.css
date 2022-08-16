@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.imgProductoCart {
+    height: 10em;
+    width: 10em;
+    border-radius: 25%;
+}
+.itemCarritoBody {
+    box-sizing: content-box;
+    border: #ffc107 double 1px;
+    margin-left: 1em;
+    padding: 1em;
+}
+.itemCarritoBody p {
+    box-sizing: content-box;
+    color: #fff;
+    font-size: medium;
+    font-weight: bold;
+    font-size: larger;
+}
+.itemCarritoBody h4 {
+    box-sizing: content-box;
+    color: #ffc107;
+
+}
+.cartTotal {
+    box-sizing: content-box;
+    margin: 1em;
+    padding: 1em;
+    border: #ffc107 solid 3px;
+    color: #fff;
+    font-weight: bolder;
+}

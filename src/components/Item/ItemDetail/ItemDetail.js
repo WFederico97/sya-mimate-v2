@@ -3,7 +3,7 @@ import Counter from "../ItemCount/ItemCount";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/esm/Container";
 import { Link } from "react-router-dom";
-import { useCartContext } from "../../context/CartContext";
+import { useCartContext } from "../../../context/CartContext";
 
 export default function ItemDetail(props) {
   const [irAlCarrito, setearCarrito] = useState(false);
@@ -38,8 +38,8 @@ export default function ItemDetail(props) {
               <div className="justify-content-center col-6">
                 <Link to="/cart">
                   {" "}
-                  <Button className="btn btn-success">
-                    Finalizar Compra
+                  <Button className="btn btn-dark">
+                    Ir al carrito
                   </Button>{" "}
                 </Link>
               </div>

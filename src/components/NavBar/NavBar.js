@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import './NavBar.css'
-import CartWidget from '../CartWidget';
+import CartWidget from '../Cart/CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import { TiThMenu } from "react-icons/ti";
@@ -38,15 +38,6 @@ function NavBarLogo(props) {
               <Nav.Link as={Link} to={"/categoria/Termos"} className='text-warning' >Termos</Nav.Link>
               <Nav.Link  as={Link} to={"/categoria/Accesorios"} className='text-warning' >Accesorios</Nav.Link>
             </Nav>
-            <Form className="d-flex m-1 p-1 searchForm">
-            <Form.Control
-              type="search"
-              placeholder="Buscar"
-              className="m-2"
-              aria-label="Buscar"
-            />
-            <Button variant="outline-warning">Buscar</Button>
-          </Form>
             <CartWidget/>
             </Navbar.Collapse>
         </Container>

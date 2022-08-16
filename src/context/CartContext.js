@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Button } from "react-bootstrap";
 const CartContext = React.createContext([]);
 
 export const useCartContext = () => useContext(CartContext);
@@ -32,6 +33,27 @@ const CartProvider = ({ children }) => {
   const quitarProducto = (id) =>
     setCart(cart.filter((producto) => producto.id !== id));
 
+  //Funcion de precio final
+  const precioFinal = () => {
+    return (
+      cart.reduce((prev,act) => prev + act.cantidad * act.precio, 0)
+    );
+  }
+
+  //Funcion total de productos
+  const totalProductos = () => {
+    return (
+      cart.reduce((prev, act) => prev + act.cantidad, 0 )
+    );
+  }
+  //Funcion finalizar compra
+  const finalizarCompra = () => {
+    return (cart.length >=1) ? <Button  className="btn btn-success w-100">Finalizar Compra</Button>  : " "
+   }
+
+
+  
+
   return (
     <CartContext.Provider
       value={{
@@ -39,7 +61,10 @@ const CartProvider = ({ children }) => {
         agregadoAlCart,
         quitarProducto,
         addProducto,
+        precioFinal,
         cart,
+        totalProductos,
+        finalizarCompra,
       }}
     >
       {children}
