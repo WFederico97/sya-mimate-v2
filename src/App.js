@@ -14,26 +14,26 @@ import Cart from './components/Cart/Cart';
 
 function App() {
   return (
+    <CartProvider>
+      <div className='container-fluid flex  body'>
+        <div id='NavBar'>
+          <NavBarLogo />
+        </div>
+        <span></span>
+        <SaludoHome />
+        <br />
 
-                <div  className='container-fluid flex  body'>
-            <div id='NavBar'>
-                <NavBarLogo/> 
-            </div>
-            <span></span>
-            <SaludoHome/>
-            <br/>
-            <CartProvider>
-            <Routes>
-              <Route path='/' element={<ItemListContainer /> }/>
-              <Route path='/categoria/:categoryId'  element={<ItemListContainer />}/>
-              <Route path='/item/:id' element={<ItemDetailContainer />} />
-              <Route path='/cart' element={<Cart/>} />
-            </Routes>
-            </CartProvider>
-          </div>
+        <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/categoria/:categoryId' element={<ItemListContainer />} />
+          <Route path='/item/:id' element={<ItemDetailContainer />} />
+          <Route path='/cart' element={<Cart />} />
+        </Routes>
+      </div>
+    </CartProvider>
 
 
-          
+
   )
 }
 

@@ -5,7 +5,6 @@ import Nav from 'react-bootstrap/Nav';
 import './NavBar.css'
 import CartWidget from '../Cart/CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
-import { Form, Button } from 'react-bootstrap';
 import { TiThMenu } from "react-icons/ti";
 
 

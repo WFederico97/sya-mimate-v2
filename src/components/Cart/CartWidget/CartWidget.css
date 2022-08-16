@@ -1,0 +1,20 @@
+#carritoDeComprasIcono {
+    margin: 1em;
+    height: 3em;
+    width: 3em;
+    color: #fff;
+}
+#carritoDeComprasIcono:hover {
+    color: #ffc107 ;
+    
+}
+.itemWidget {
+    background-color: #ffc107;
+    border-radius: 60%;
+    color: #000;
+    font-size: 4em;
+    font-weight: bolder;
+    text-align: center;
+    width: 1em;
+    margin: 1em;
+}
