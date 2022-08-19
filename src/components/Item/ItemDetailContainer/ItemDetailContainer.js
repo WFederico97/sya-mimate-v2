@@ -32,7 +32,7 @@ export default function ItemDetailContainer() {
   }, [id])
 
   return (
-    <div>
+    <div className='itemDetailContainer'>
       {
         <ItemDetail {...resultado} />
       }

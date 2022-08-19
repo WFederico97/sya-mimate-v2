@@ -1,58 +1,96 @@
 import React, { useState } from "react";
 import Counter from "../ItemCount/ItemCount";
+import { Accordion, Modal, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
+import { IoArrowBackCircle } from "react-icons/io5";
 import Container from "react-bootstrap/esm/Container";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../../context/CartContext";
+import './ItemDetail.css'
 
 export default function ItemDetail(props) {
   const [irAlCarrito, setearCarrito] = useState(false);
   const { addProducto } = useCartContext();
+  const [smShow, setSmShow] = useState(false)
+
+  const showModal = () => {
+    setSmShow(true);
+    setTimeout(() => {
+      setSmShow(false)
+    }, 2000)
+  }
 
   function agregarProducto(cantidad) {
     setearCarrito(true);
     addProducto(props, cantidad);
-    alert(`¡Muy bien, agregaste ${cantidad} ${props.categoria} ${props.nombre} con éxito!`);
+     alert(`¡Muy bien, agregaste ${cantidad} ${props.categoria} ${props.nombre} con éxito!`);
   }
   return (
-    <Container
-      fluid
-      className="col-4 m-auto p-auto d-flex row mx-auto justify-content-center"
-    >
-      <div className="row flex col-12 mb-2 ">
-        <div className="col-sm ">
-          <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 justify-content-center position-relative cardItem">
-            <div className="col p-4 d-flex flex-column position-static">
-              {/* <strong className="d-inline-block mb-2 fs-4 text-dark">{categoria}</strong> */}
-              <h3 className="mb-0 cardTittle">{props.nombre}</h3>
-              <p className="card-text mb-auto p-1 fs-1 cardText">${props.precio}</p>
-            </div>
-            <div className="col-auto  d-lg-flex">
-              <img
-                src={props.imagen}
-                alt="product img"
-                className="img-fluid imagenProducto "
-              />
-            </div>
-            {irAlCarrito ? (
-              <div className="justify-content-center col-6">
-                <Link to="/cart">
-                  {" "}
-                  <Button className="btn btn-dark">
-                    Ir al carrito
-                  </Button>{" "}
-                </Link>
-              </div>
-            ) : (
-              <Counter initial={1} stock={props.stock} onAdd={agregarProducto} />
-            )}
-
-            <span className=" fs-3 text-center text-warning fw-bold">
-              Stock disponible : {props.stock}
-            </span>
-          </div>
+    <Container fluid='md'>
+      <Row>
+        <div>
+          <Link to="/" id="backButton">
+            <IoArrowBackCircle />
+          </Link>
         </div>
-      </div>
+        <Col>
+          <img src={props.imagen} alt={props.nombre} className='img-fluid detailProductImg' />
+        </Col>
+        <Col className="productDetailHeader" >
+          <h5>{props.categoria}</h5>
+          <h1>{props.nombre}</h1>
+          <hr />
+          <div className="price">
+            <div className="price__data">
+              <h2>{`$ ${props.precio}`}</h2>
+            </div>
+            <h6>En stock: {props.stock} unidades</h6>
+          </div>
+          {irAlCarrito ? (
+            <div className=" col-12  mx-auto ">
+              <Row>
+                <Col xl={6}>
+                  <Link to="/cart">
+                    {" "}
+                    <Button variant="outline-primary" className=" col-12 ">
+                      Ir al carrito
+                    </Button>{" "}
+                  </Link>
+                </Col>
+                <Col xl={6}>
+                  <Link to="/">
+                    {" "}
+                    <Button variant="outline-success" className="col-12 ">
+                      Continuar Comprando
+                    </Button>{" "}
+                  </Link>
+                </Col>
+              </Row>
+
+            </div>
+          ) : (
+            <Counter initial={1} stock={props.stock} onAdd={agregarProducto} onAddShowModal={showModal} />
+          )}
+          <div className="mt-3">
+            <Accordion defaultActiveKey="0">
+              <Accordion.Item eventKey="0">
+                <Accordion.Header className="fw-bolder">Descripción</Accordion.Header>
+                <Accordion.Body>{props.descripcion}</Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+          </div>
+          <Modal
+            size="m"
+            show={smShow}
+            onHide={() => setSmShow(false)}
+            aria-labelledby="example-modal-sizes-title-sm"
+          >
+            <Modal.Body>
+              Has agregado <span>{props.nombre}</span> a tu carrito
+            </Modal.Body>
+          </Modal>
+        </Col>
+      </Row>
     </Container>
-  );
+  )
 }

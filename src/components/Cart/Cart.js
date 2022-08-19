@@ -8,13 +8,6 @@ import Button from 'react-bootstrap/Button'
 const Cart = () => {
     const { cart, precioFinal, finalizarCompra } = useCartContext();
 
-    // if (cart.lenght == 0) {
-    //     return (
-    //         <>
-
-    //         </>
-    //     )
-    // }
     return (
         <>
             {

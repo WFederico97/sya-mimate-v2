@@ -30,7 +30,7 @@ export default function ItemListContainer() {
   return (
     <>
       {
-        loading ? <h4 className='text-dark text-center bg-warning '>Cargando productos...</h4> : <ItemList productos={resultado} />
+        loading ? <h4 className='text-dark text-center bg-warning '>Cargando productos...</h4>  : <ItemList productos={resultado} />
       }
 
     </>

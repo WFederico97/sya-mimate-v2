@@ -1,0 +1,89 @@
+.itemDetailContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.detailProductImg {
+    height: 30em;
+    width: 30em;
+    border-radius: 25%;
+}
+.productDetailHeader h5 {
+    color: #0048ff;
+    font-size: 2em;
+}
+.productDetailHeader h1 {
+    color: #ffc107;
+}
+.productDetailHeader .price{
+    display: flex;
+    justify-content: space-between;
+}
+.productDetailHeader .price__data h2 {
+    color: #000000;
+    font-size: bolder;
+}
+.productDetailHeader .price h6{
+    align-self: flex-end;
+    font-weight: bolder;
+    text-decoration: underline solid;
+    font-size: 1.5em;
+}
+.productDetailHeader hr{
+    margin-top: 0;
+}
+.accordion{
+    height: 15em;
+    width: 100%;
+    font-size: larger;
+    font-weight: bolder;
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: transparent;
+    outline: 0;
+    box-shadow:none;
+}
+.accordion-button:not(.collapsed) {
+    color: white;
+    font-weight: bold;
+    background-color: #ffc107;
+}
+.modal{
+    pointer-events: none;
+}
+.modal-dialog{
+    margin-right: 2rem;
+    top: 1rem;
+    width: 100%;
+}
+.modal-dialog .modal-content{
+    right: 0;
+    border: 2px solid rgb(157, 197, 74);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+.modal-dialog .modal-content span{
+    color: rgb(157, 197, 74);
+    font-weight: bold;
+}
+#backButton{
+    position:relative;
+    float: right;
+    right: 1rem;
+    color: #ffc107;
+    transition-property: transform;
+    transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+}
+#backButton svg{
+    background-color: rgba(211, 211, 211, 0.3);
+    border-radius: 50%;
+    font-size: 5rem;
+    padding: 1rem;
+}
+#backButton:hover {
+    transform: scale(1.1);
+}
