@@ -13,6 +13,7 @@ export default function ItemListContainer() {
   const { categoryId } = useParams ();
   useEffect(() => {
     getFetch.then((res) =>{
+      console.log('>>>>respuiesta', res)
       if(categoryId){
           setResultado(res.filter(products => products.categoria == categoryId))
       }

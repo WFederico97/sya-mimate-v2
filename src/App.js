@@ -30,18 +30,18 @@ const firebaseConfig = {
 
 function App() {
 
-  useEffect(() => {
-    const app = initializeApp(firebaseConfig);
+  // useEffect(() => {
+  //   const app = initializeApp(firebaseConfig);
 
-    const db = getFirestore(app) //base de datos
-    const colRef = collection(db, 'products') ///referencia a la coleccion
-    getDocs(colRef).then((snapshot) => {
+  //   const db = getFirestore(app) //base de datos
+  //   const colRef = collection(db, 'products') ///referencia a la coleccion
+  //   getDocs(colRef).then((snapshot) => {
 
-    }, (error) => {
+  //   }, (error) => {
 
-    });
+  //   });
 
-  }, [])
+  // }, [])
 
 
 

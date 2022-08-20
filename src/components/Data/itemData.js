@@ -1,4 +1,6 @@
 /* eslint-disable eqeqeq */
+import { dataBase } from "../Firebase/Firebase";
+import { collection, getDocs } from 'firebase/firestore'
 
 export const data = [
     {
@@ -200,14 +202,32 @@ export const data = [
 ]
 
 export const getFetch = new Promise((res,rej)=>{
-    let condition=true
-    if(condition){
-        setTimeout(()=>{
-            res(data)
-        },2000)
-    }else{
-        rej(console.log("no hay datos"))
-    }
+    const colRef = collection(dataBase, 'products');
+    getDocs(colRef).then((snapshot)=> {
+        console.log('>>>:', snapshot);
+
+        const productosItemList = snapshot.docs.map((rawDoc)=> {
+            return{
+                id: rawDoc.id,
+                ...rawDoc.data()
+            }
+        });
+
+        console.log(productosItemList)
+        res(productosItemList)
+    }, (error) => {
+        rej(error)
+    })
+
+
+    // let condition=true
+    // if(condition){
+    //     setTimeout(()=>{
+    //         res(data)
+    //     },2000)
+    // }else{
+    //     rej(console.log("no hay datos"))
+    // }
 });
 
  export const getProductsByCategory=(categoryId)=>{
