@@ -1,5 +1,4 @@
 import React from "react";
-import Carousel from 'react-bootstrap/Carousel'
 import './IntroHome.css'
 import 'animate.css';
 
@@ -9,7 +8,7 @@ export default function SaludoHome() {
         <>
             <div className=" d-flex row col-xl-12">
                 <div className="home-saludo text-warning">
-                <h1 className="text-warning fw-bold">Bienvenido a SyA MiMate</h1>
+                <h1 className="text-warning fw-bold">Bienvenido a S&A Mimate</h1>
                 <h4 className="p-home animate__animated animate__fadeInLeft">
                     Somos un emprendimiento joven dedicado a la venta de productos para el
                     mate, buscando ofrecer gran variabilidad y accesibilidad para todos

@@ -21,7 +21,7 @@ export default function Header() {
                             className=" mx-auto img-fluid logoMate"
                         />
                         <hr></hr>
-                        <p className='text-light navbar-text'> SyA Mi Mate</p>
+                        <p className='text-light navbar-text'> S&A Mimate</p>
                     </Nav.Link>
 
 

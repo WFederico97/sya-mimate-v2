@@ -6,7 +6,6 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { data, getFetch } from '../../Data/itemData';
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 
 
