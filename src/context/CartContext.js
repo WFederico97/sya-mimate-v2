@@ -1,5 +1,4 @@
 import React, { useContext,  useState } from "react";
-import { Button } from "react-bootstrap";
 const CartContext = React.createContext([]);
 
 export const useCartContext = () => useContext(CartContext);
@@ -49,11 +48,6 @@ const CartProvider = ({ children }) => {
       cart.reduce((prev, act) => prev + act.cantidad, 0 )
     );
   }
-  //Funcion finalizar compra
-  const finalizarCompra = () => {
-    return (cart.length >=1) ? <Button onClick={LimpiarCart} className="btn btn-success w-100">Finalizar Compra</Button>  : " "
-   }
-
 
   
 
@@ -67,7 +61,6 @@ const CartProvider = ({ children }) => {
         precioFinal,
         cart,
         totalProductos,
-        finalizarCompra,
       }}
     >
       {children}

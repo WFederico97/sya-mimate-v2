@@ -23,16 +23,6 @@ const CartItem = ({ producto }) => {
                 <Button variant="danger" onClick={() => quitarProducto(producto.id)}>Quitar Producto</Button>
             </Row>
         </Container>
-        // <div className="itemCarrito w-auto shadow-lg rounded d-flex row  col-3">
-        //     
-        //     <div className="itemCarritoBody d-flex row col p-1 mb-2">
-        //         
-        //         
-        //         
-        //         
-        //          
-        //     </div>
-        // </div>
     )
 }
 export default CartItem
