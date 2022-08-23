@@ -8,6 +8,7 @@ import ItemDetailContainer from './components/Item/ItemDetailContainer/ItemDetai
 import CartProvider from './context/CartContext';
 import Cart from './components/Cart/Cart';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -30,6 +31,9 @@ function App() {
           <Route path='/item/:id' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />
         </Routes>
+        <div id='Footer'>
+          <Footer/>
+        </div>
       </div>
     </CartProvider>
 

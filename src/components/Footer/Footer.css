@@ -1,0 +1,11 @@
+.socialMedia {
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  font-size: x-large;
+}
+.socialMedia svg {
+  height: 1em;
+  width: 1em;
+  color: #ff00;
+}
