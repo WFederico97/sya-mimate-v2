@@ -1,11 +1,34 @@
-.socialMedia {
-  margin: 1em;
+.sitemap{
   display: flex;
-  flex-direction: row;
-  font-size: x-large;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
 }
-.socialMedia svg {
-  height: 1em;
-  width: 1em;
-  color: #ff00;
+
+.socialMedia   {
+display: flex;
+flex-direction: column;
+gap: 3em;
+justify-content: end;
+}
+.socialMedia  svg {
+  height: 2em;
+  width: 3em;
+}
+.socialMedia .socialMediaIconInstagram :hover {
+  color: #f56040;
+}
+.socialMedia .socialMediaIconFacebook :hover {
+  color: #0165E1;
+}
+.socialMedia .socialMediaIconWhatsapp :hover {
+  color: #28D146;
+}
+
+.trademark {
+  border-top: #6c64647d 2px solid;
+}
+.trademark p {
+  font-size: 1.4em;
+  font-weight: bold;
 }

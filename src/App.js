@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css'
 import ItemListContainer from './components/Item/ItemListContainer/ItemListContainer';
 import 'bootswatch/dist/morph/bootstrap.min.css';
@@ -32,6 +32,7 @@ function App() {
           <Route path='/cart' element={<Cart />} />
         </Routes>
         <div id='Footer'>
+          <hr></hr>
           <Footer/>
         </div>
       </div>
