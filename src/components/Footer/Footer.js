@@ -1,6 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
-import Container from "react-bootstrap/Container";
+import { Col } from "react-bootstrap";
 import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "./Footer.css";
@@ -77,7 +76,7 @@ export default function Footer() {
             </Col>
             <hr></hr>
             <div className="trademark">
-                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/federico-wuthrich-668633164/" ><p class="text-center  text-dark"> Designed by Federico</p></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/federico-wuthrich-668633164/" ><p className="text-center  text-dark"> Designed by Federico</p></a>
             </div>
         </div>
 

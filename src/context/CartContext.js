@@ -1,12 +1,13 @@
-import React, { useContext,  useState } from "react";
+import React, { useContext,  useEffect,  useState } from "react";
 const CartContext = React.createContext([]);
 
 export const useCartContext = () => useContext(CartContext);
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-
-  console.log("carro:", cart);
+  useEffect(()=> {
+        localStorage.setItem('compra', JSON.stringify(cart))
+  },[cart]) //setear item en localstorage
 
   const addProducto = (item, cantidad) => {
     if (agregadoAlCart(item.id)) {
@@ -17,6 +18,7 @@ const CartProvider = ({ children }) => {
             : producto;
         })
       );
+
     } else {
       setCart([...cart, { ...item, cantidad }]);
     }
