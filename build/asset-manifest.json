@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/sya-mimate-v2/static/css/main.d85c513e.css",
-    "main.js": "/sya-mimate-v2/static/js/main.72ef692c.js",
+    "main.css": "/sya-mimate-v2/static/css/main.293a3fef.css",
+    "main.js": "/sya-mimate-v2/static/js/main.6adc8372.js",
     "static/js/787.861558c1.chunk.js": "/sya-mimate-v2/static/js/787.861558c1.chunk.js",
     "static/media/logo-mimate.png": "/sya-mimate-v2/static/media/logo-mimate.6a3a4c84d9789379aa86.png",
     "index.html": "/sya-mimate-v2/index.html",
-    "main.d85c513e.css.map": "/sya-mimate-v2/static/css/main.d85c513e.css.map",
-    "main.72ef692c.js.map": "/sya-mimate-v2/static/js/main.72ef692c.js.map",
+    "main.293a3fef.css.map": "/sya-mimate-v2/static/css/main.293a3fef.css.map",
+    "main.6adc8372.js.map": "/sya-mimate-v2/static/js/main.6adc8372.js.map",
     "787.861558c1.chunk.js.map": "/sya-mimate-v2/static/js/787.861558c1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d85c513e.css",
-    "static/js/main.72ef692c.js"
+    "static/css/main.293a3fef.css",
+    "static/js/main.6adc8372.js"
   ]
 }
