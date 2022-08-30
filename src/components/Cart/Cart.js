@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import CartItem from "./CartItem/CartItem";
 import { useCartContext } from "../../context/CartContext";
 import './Cart.css'
@@ -15,13 +15,13 @@ const Cart = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-      const [compra, setearCompra] = useState ([]);
-      useEffect(()=> {
-          const compra = JSON.parse(localStorage.getItem('compra'))
-          if(compra) {
-              setearCompra(compra)
-          }
-      }, [])  //traer el item "Compra " creado en el localstorage 
+    const [compra, setearCompra] = useState([]);
+    useEffect(() => {
+        const compra = JSON.parse(localStorage.getItem('compra'))
+        if (compra) {
+            setearCompra(compra)
+        }
+    }, [])  //traer el item "Compra " creado en el localstorage 
 
     const { cart, precioFinal, LimpiarCart } = useCartContext();
     const order = {
@@ -38,18 +38,18 @@ const Cart = () => {
         const dataBase = getFirestore();
         const ordersCollection = collection(dataBase, 'orders');
         addDoc(ordersCollection, order)
-            .then(({ id }) =>         <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-              <Modal.Title>S&A Mimate</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>(`felicitaciones, su compra ha sido realizada con éxito. Su numero de referencia es: ${id}`)</Modal.Body>
-            <Modal.Footer>
-              <Button variant="primary" onClick={handleClose}>
-                Cerrar
-              </Button>
-            </Modal.Footer>
-          </Modal>  ) //Modal para notificar que la compra fue realizada con exito, brindandole un id como referencia de compra
-        LimpiarCart() 
+            .then(({ id }) => <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>S&A Mimate</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>(`felicitaciones, su compra ha sido realizada con éxito. Su numero de referencia es: ${id}`)</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="primary" onClick={handleClose}>
+                        Cerrar
+                    </Button>
+                </Modal.Footer>
+            </Modal>) //Modal para notificar que la compra fue realizada con exito, brindandole un id como referencia de compra
+        LimpiarCart()
         cart.forEach((item) => {
             const itemRef = doc(dataBase, 'products', item.id)
             updateDoc(itemRef, {
@@ -72,51 +72,51 @@ const Cart = () => {
                     </div>
                     :
                     <Container fluid>
-                         <Row>
-                             <Col className="productCheckout">
-                                 {
-                                     cart.map((producto) => {
-                                         return (
-                                             <Card className="cardProductCheckout mb-3">
-                                                 <CartItem key={producto.id} producto={producto} />
-                                             </Card>
+                        <Row>
+                            <Col className="productCheckout">
+                                {
+                                    cart.map((producto) => {
+                                        return (
+                                            <Card className="cardProductCheckout mb-3">
+                                                <CartItem key={producto.id} producto={producto} />
+                                            </Card>
 
-                                         )
-                                     })
-                                 }
-                             </Col>
-                             <Col>
-                                 <Card className="formUserCheckout  p-3">
-                                     <Form >
-                                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                                             <Form.Label className="text-dark">Email</Form.Label>
-                                             <Form.Control type="email" placeholder="Ingrese su email" required />
-                                             <Form.Text className="text-dark fs-5">
-                                                 Nunca revelaremos esta informacion.
-                                             </Form.Text>
-                                         </Form.Group>
+                                        )
+                                    })
+                                }
+                            </Col>
+                            <Col>
+                                <Card className="formUserCheckout  p-3">
+                                    <Form >
+                                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                                            <Form.Label className="text-dark">Email</Form.Label>
+                                            <Form.Control type="email" placeholder="Ingrese su email" required />
+                                            <Form.Text className="text-dark fs-5">
+                                                Nunca revelaremos esta informacion.
+                                            </Form.Text>
+                                        </Form.Group>
 
-                                         <Form.Group className="mb-3" controlId="formBasicName">
-                                             <Form.Label className="text-dark">Nombre</Form.Label>
-                                             <Form.Control type="text" placeholder="Indicanos tu nombre" required />
-                                         </Form.Group>
-                                         <Form.Group className="mb-3" controlId="formBasicAdress">
-                                             <Form.Label className="text-dark">Direccion</Form.Label>
-                                             <Form.Control type="text" placeholder="Indicanos tu Direccion" />
-                                         </Form.Group>
-                                         <Form.Group className="mb-3" controlId="formBasicPhone">
-                                             <Form.Label className="text-dark">Telefono</Form.Label>
-                                             <Form.Control type="text" required placeholder="Indicanos un numero de contacto" />
-                                         </Form.Group>
-                                         <Button disabled={cart.length === 0} onClick={emitirCompra} className="btn btn-info col-12 mt-3">Checkout</Button>
-                                     </Form>
-                                 </Card>
-                             </Col>
-                         </Row>
-                         <Card className="cartTotal">
-                             <h4 className="text-dark fw-bolder" >Total: ${precioFinal()}</h4>
-                         </Card>
-                     </Container>
+                                        <Form.Group className="mb-3" controlId="formBasicName">
+                                            <Form.Label className="text-dark">Nombre</Form.Label>
+                                            <Form.Control type="text" placeholder="Indicanos tu nombre" required />
+                                        </Form.Group>
+                                        <Form.Group className="mb-3" controlId="formBasicAdress">
+                                            <Form.Label className="text-dark">Direccion</Form.Label>
+                                            <Form.Control type="text" placeholder="Indicanos tu Direccion" />
+                                        </Form.Group>
+                                        <Form.Group className="mb-3" controlId="formBasicPhone">
+                                            <Form.Label className="text-dark">Telefono</Form.Label>
+                                            <Form.Control type="text" required placeholder="Indicanos un numero de contacto" />
+                                        </Form.Group>
+                                        <Button disabled={cart.length === 0} onClick={emitirCompra} className="btn btn-info col-12 mt-3">Checkout</Button>
+                                    </Form>
+                                </Card>
+                            </Col>
+                        </Row>
+                        <Card className="cartTotal">
+                            <h4 className="text-dark fw-bolder" >Total: ${precioFinal()}</h4>
+                        </Card>
+                    </Container>
 
             }
 
