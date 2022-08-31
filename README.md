@@ -3,6 +3,8 @@ S&A miMate es una ecommerce dedicada a la comercialización de mates uruguayos ,
 
 Utilizo esta propuesta para presentar mi proyecto final , con el cual iré trabajando durante la cursada.
 
+![Alt Text](https://gifyu.com/image/SwEEr) 
+
 # Linkedin
 
 https://www.linkedin.com/in/federico-wuthrich-668633164/
