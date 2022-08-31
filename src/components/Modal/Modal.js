@@ -55,7 +55,6 @@ const ModalConfirmarCompra = ({ show, handleClose }) => {
             })
             .finally(() => {
                 setCompraConfirmada(true)
-                // setCart([])
             })
         cart.forEach((item) => {
             const itemRef = doc(dataBase, 'products', item.id)
