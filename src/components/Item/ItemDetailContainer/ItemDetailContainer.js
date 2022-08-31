@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
+import LoadingSpinner from '../../Spinner/Spinner';
 
 
 export default function ItemDetailContainer() {
@@ -27,13 +28,13 @@ export default function ItemDetailContainer() {
     })
     .finally(()=> {
       setLoading(false)
-    })
+    }, 2000)
   }, [id])
 
   return (
     <div className='itemDetailContainer'>
       {
-       loading ? <h4 className='text-dark text-center bg-warning '>Cargando productos...</h4>  : <ItemDetail {...resultado} />
+       loading ? <div><LoadingSpinner    />  </div>  : <ItemDetail {...resultado} />
       }
     </div>
   );

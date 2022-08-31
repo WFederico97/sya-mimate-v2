@@ -42,3 +42,13 @@
     background-color: #0048ff1d;
     font-weight: bolder;
 } 
+.cartTotal h4 {
+    color: #000;
+}
+.cartTotal .Icon {
+    color: #000;
+    font-size: 4em;
+    margin: 0.3em;
+
+}
+

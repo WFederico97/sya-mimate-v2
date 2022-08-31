@@ -23,7 +23,6 @@ export default function ItemDetail(props) {
   function agregarProducto(cantidad) {
     setearCarrito(true);
     addProducto(props, cantidad);
-     alert(`¡Muy bien, agregaste ${cantidad} ${props.categoria} ${props.nombre} con éxito!`);
   }
   return (
     <Container fluid='md'>

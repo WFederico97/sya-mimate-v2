@@ -9,6 +9,7 @@ import CartProvider from './context/CartContext';
 import Cart from './components/Cart/Cart';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import 'bootstrap/dist/js/bootstrap.bundle'
 
 
 

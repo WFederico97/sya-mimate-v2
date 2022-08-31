@@ -1,13 +1,14 @@
-import React, { useContext,  useEffect,  useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 const CartContext = React.createContext([]);
 
 export const useCartContext = () => useContext(CartContext);
 
 const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
-  useEffect(()=> {
-        localStorage.setItem('compra', JSON.stringify(cart))
-  },[cart]) //setear item en localstorage
+  let getCartFromLs = JSON.parse(window.localStorage.getItem('compra'))
+  if (getCartFromLs === null) {
+    getCartFromLs = [];
+  }
+  const [cart, setCart] = useState(getCartFromLs);
 
   const addProducto = (item, cantidad) => {
     if (agregadoAlCart(item.id)) {
@@ -27,7 +28,8 @@ const CartProvider = ({ children }) => {
   const LimpiarCart = () => {
     return (
       setCart([])
-  )};
+    )
+  };
 
   //funcion de agregar al carrito
   const agregadoAlCart = (id) => {
@@ -40,18 +42,23 @@ const CartProvider = ({ children }) => {
   //Funcion de precio final
   const precioFinal = () => {
     return (
-      cart.reduce((prev,act) => prev + act.cantidad * act.precio, 0)
+      cart.reduce((prev, act) => prev + act.cantidad * act.precio, 0)
     );
   }
 
   //Funcion total de productos
   const totalProductos = () => {
     return (
-      cart.reduce((prev, act) => prev + act.cantidad, 0 )
+      cart.reduce((prev, act) => prev + act.cantidad, 0)
     );
   }
 
-  
+
+
+  useEffect(() => {
+    window.localStorage.setItem("compra", JSON.stringify(cart));
+  }, [cart]);
+
 
   return (
     <CartContext.Provider

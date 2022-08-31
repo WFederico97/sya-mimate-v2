@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom';
 import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
+import LoadingSpinner from '../../Spinner/Spinner';
 
 
 export default function ItemListContainer() {
@@ -24,7 +25,7 @@ export default function ItemListContainer() {
       })
       .finally(()=> {
         setLoading(false)
-      })
+      }, 2000)
   } else {
     getDocs(queryCollection)
       .then(res => setResultado(res.docs.map(producto => ({id: producto.id, ...producto.data()}))))
@@ -33,7 +34,7 @@ export default function ItemListContainer() {
       })
       .finally(()=> {
         setLoading(false)
-      })
+      }, 2000)
   }
 
 
@@ -42,7 +43,7 @@ export default function ItemListContainer() {
   return (
     <>
       {
-        loading ? <h4 className='text-dark text-center bg-warning '>Cargando productos...</h4>  : <ItemList productos={resultado} />
+         loading ? <div><LoadingSpinner    />  </div> : <ItemList productos={resultado} />
       }
 
     </>
